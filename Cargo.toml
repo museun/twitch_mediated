@@ -1,0 +1,18 @@
+[package]
+name = "twitch_mediated"
+version = "0.1.0"
+edition = "2021"
+license = "0BSD"
+
+[dependencies]
+anyhow         = "1.0.72"
+eframe         = { version = "0.22.0", features = ["persistence"] }
+egui           = "0.22.0"
+fastrand       = "2.0.0"
+tokio          = { version = "1.29.1", features = ["rt-multi-thread", "macros", "net", "sync", "io-util", "time"] }
+twitch_message = { git = "https://github.com/museun/twitch_message", rev = "3ed7a259565bcf172a03f7f3d15a266442076845", version = "0.1.2" }
+
+
+[patch.crates-io]
+eframe = { path = "c:/dev/forks/egui/crates/eframe" }
+egui = { path = "c:/dev/forks/egui/crates/egui" }
